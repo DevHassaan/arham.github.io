@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: url(Home.png) no-repeat;
+    color: #ededed;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 25px;
+    color: #ededed;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.home {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-content {
+    max-width: 600px;
+    text-align: center;
+    padding: 0 20px; /* Added padding for responsiveness */
+}
+
+.home-content h1 {
+    font-size: 40px; /* Adjusted font-size for responsiveness */
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0;
+}
+
+.home-content h3 {
+    font-size: 24px; /* Adjusted font-size for responsiveness */
+    font-weight: 700;
+    color: #00abf0;
+    margin: 0;
+    margin-top: 20px; /* Added margin-top for responsiveness */
+}
+
+.home-content p {
+    font-size: 16px;
+    margin: 20px 0 40px;
+    font-weight: 600;
+}
+
+.home-content .btn-box {
+    max-width: 350px; /* Added max-width for responsiveness */
+    width: 100%;
+    height: 50px;
+    margin: 0 auto;
+}
+
+.btn-box a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* Modified width to fill the container */
+    height: 100%;
+    background: #00abf0;
+    border: 2px solid #00abf0;
+    border-radius: 10px;
+    font-size: 15px; /* Adjusted font-size for responsiveness */
+    color: #081b29;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    z-index: 1;
+    overflow: hidden;
+    transition: 0.5s;
+    cursor: none;
+}
+
+.btn-box a:nth-child(1) {
+    background: transparent;
+    color: #00abf0;
+}
+
+.btn-box a:nth-child(1):hover {
+    color: #081b29;
+    transition: 0.5s;
+}
+
+.btn-box a:nth-child(1)::before {
+    background: #00abf0;
+}
+
+.btn-box a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #00abf0;
+    z-index: -1;
+    transition: 0.5s ease;
+}
+
+.btn-box a:hover::before {
+    width: 100%;
+}
+
+.home-sci {
+    position: fixed;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 280px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.home-sci a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #00abf0;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #00abf0;
+    text-decoration: none;
+    z-index: 1;
+    overflow: hidden;
+    transition: 0.5s ease;
+    margin-right: 5px;
+}
+
+.home-sci a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #00abf0;
+    z-index: -1;
+    transition: 0.5s ease;
+}
+
+.home-sci a:hover::before {
+    width: 100%;
+}
+
+.home-sci a::after {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 0;
+    height: 30px;
+    background: #00abf0;
+    border-radius: 50%;
+    z-index: -1;
+}
+
+@media only screen and (max-width: 600px) {
+  .home-content h1 {
+    font-size: 32px;
+  }
+  
+  .home-content h3 {
+    font-size: 20px;
+  }
+  
+  .btn-box a {
+    font-size: 18px;
+  }
+}
